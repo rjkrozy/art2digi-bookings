@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Art2Digi — Bookings Dashboard</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="login-view">
+    <img src="images/logo.png" alt="Art2Digi" class="login-logo" />
+    <h1>Art2Digi Dashboard</h1>
+    <p>Log in with your admin account.</p>
+    <input id="login-email" type="email" placeholder="Email" /><br />
+    <input id="login-password" type="password" placeholder="Password" /><br />
+    <button id="login-btn">Log in</button>
+    <p class="error-msg" id="login-error"></p>
+  </div>
+
+  <div id="app-view">
+    <header>
+      <img src="images/logo.png" alt="Art2Digi" class="header-logo" />
+      <span class="header-title">Bookings Dashboard</span>
+      <button id="logout-btn">Log out</button>
+    </header>
+
+    <div class="tabs">
+      <button data-tab="bookings" class="active">Bookings</button>
+      <button data-tab="contacts">Contact messages</button>
+    </div>
+
+    <div id="bookings-panel" class="tab-panel active">
+      <h2>Bookings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th><th>Session</th><th>Name</th><th>Email</th><th>Phone</th>
+            <th>Amount</th><th>Payment</th><th>Booked at</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="contacts-panel" class="tab-panel">
+      <h2>Contact messages</h2>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Message</th><th>Received at</th></tr>
+        </thead>
+        <tbody id="contacts-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
